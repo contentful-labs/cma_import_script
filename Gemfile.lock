@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    contentful-management (0.0.1.pre)
+      http (~> 0.6)
+      multi_json (~> 1)
+    http (0.6.1)
+      http_parser.rb (~> 0.6.0)
+    http_parser.rb (0.6.0)
+    multi_json (1.10.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  contentful-management
