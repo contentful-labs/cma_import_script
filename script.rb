@@ -131,6 +131,10 @@ breweries_entries.each do |key, brewery_entry|
   brewery_entry.update(beers: brewery_beers)
 end
 
+puts "\nGo to https://app.contentful.com/spaces/#{space.id}/entries to checkout the generated data\n"
+puts "Press any key to remove all entries or Ctrl - c to leave the data as it is."
+gets
+
 puts 'Unpublishing all Beer entries where ABV is lower then 1'
 beers_entries.each do |_id, beer|
   beer.unpublish if beer.abv < 1
