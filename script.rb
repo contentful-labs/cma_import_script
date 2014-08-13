@@ -132,7 +132,7 @@ breweries_entries.each do |key, brewery_entry|
 end
 
 puts "\nGo to https://app.contentful.com/spaces/#{space.id}/entries to checkout the generated data\n"
-puts "Press any key to remove all entries or Ctrl - c to leave the data as it is."
+puts "Press any key to remove all beer entries with an ABV lower than 1"
 gets
 
 puts 'Unpublishing all Beer entries where ABV is lower then 1'
