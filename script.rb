@@ -11,10 +11,10 @@ ORGANIZATION_ID = 'your organization id'
 STYLE_IDS = %w(1 2 3 4 5 6 11 22 24 25 27 49 90 110 112)
 BREWERIES_IDS = %w(1 10 62 103 500 901 1302 1009 1101 1260)
 
-Contentful::Management::Client.new(ACCESS_TOKEN)
+client = Contentful::Management::Client.new(ACCESS_TOKEN)
 
 # create a Space
-space = Contentful::Management::Space.create(name: 'Breweries and Beers', organization_id: ORGANIZATION_ID)
+space = client.spaces.create(name: 'Breweries and Beers', organization_id: ORGANIZATION_ID)
 
 puts 'Creating Brewery Content Type'
 brewery_type = space.content_types.create(name: 'Brewery')
